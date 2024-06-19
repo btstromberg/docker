@@ -1,0 +1,26 @@
+version: '3.7'
+
+networks:
+  arx_bridge:
+    name: arx_bridge
+    driver: bridge
+
+
+services: 
+
+  arxdocker:
+    build: 
+      context: arxdocker
+    container_name: arxdocker
+    networks: 
+      - arx_bridge
+    volumes: 
+      - ./arxdocker:/app
+    tty: true
+    ports:
+      - 5001:5001
+      - 5002:5002
+      - 5003:5003
+      - 5004:5004
+      - 8447:8443
+      - 8007:8000
