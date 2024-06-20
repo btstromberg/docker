@@ -5,9 +5,11 @@ networks:
     name: arx_bridge
     driver: bridge
 
+volumes:
+  arxdocker_volume:
+    name: arxdocker_volume
 
 services: 
-
   arxdocker:
     build: 
       context: arxdocker
@@ -15,7 +17,7 @@ services:
     networks: 
       - arx_bridge
     volumes: 
-      - ./arxdocker:/app
+      - arxdocker_volume:/app
     tty: true
     ports:
       - 5001:5001
