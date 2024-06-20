@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ ! -d "/app/licenses" ]
 then
@@ -34,6 +34,3 @@ then
     echo "No license found. Place the .alc license files in the license folder"
     exit
 fi
-
-
-
