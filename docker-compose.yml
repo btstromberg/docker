@@ -7,7 +7,7 @@ networks:
 
 volumes:
   arxdocker_volume:
-    name: arxdocker_volume
+    name: "arxdocker_volume"
 
 services: 
   arxdocker:
